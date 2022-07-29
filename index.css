@@ -1,0 +1,211 @@
+/* ------ :: @HERO :: ------- */
+
+body {
+  font-family: Avenir, sans-serif;
+  margin: 0;
+  background-image: url('./assets/hanka.jpg');
+  background-repeat: repeat;
+  background-size: 999px;
+  background-position: center;
+  background-position-y: -80%;
+}
+
+/* width */
+body::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #400c00;
+  width: 15px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent;
+  background-color: transparent;
+}
+
+/* Transparent Handle */
+body::-webkit-scrollbar-thumb {
+  background: #400c00;
+}
+
+/* ------ :: @HERO :: ------- */
+
+.title {
+  color: red;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(000, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  mix-blend-mode: multiply;
+}
+
+.subtitle {
+  font-size: 40px;
+  top: -40px;
+  position: relative;
+  left: -20px;
+}
+
+/* ------ :: @ANIMATION|BLUR :: ------- */
+
+.ani {
+  animation: newFadeIn 4s;
+  -webkit-animation: newFadeIn 4s;
+  -moz-animation: newFadeIn 4s;
+  -o-animation: newFadeIn 4s;
+  -ms-animation: newFadeIn 4s;
+}
+
+@keyframes newFadeIn {
+  0% { opacity: 0; filter: brightness(1) blur(20px) }
+  10% { opacity: 1; filter: brightness(2) blur(10px) }
+  100% { opacity: 1; filter: brightness(1) blur(0) }
+}
+
+@-moz-keyframes newFadeIn {
+  0% { opacity: 0; filter: brightness(1) blur(20px) }
+  10% { opacity: 1; filter: brightness(2) blur(10px) }
+  100% { opacity: 1; filter: brightness(1) blur(0) }
+}
+
+@-webkit-keyframes newFadeIn {
+  0% { opacity: 0; filter: brightness(1) blur(20px) }
+  10% { opacity: 1; filter: brightness(2) blur(10px) }
+  100% { opacity: 1; filter: brightness(1) blur(0) }
+}
+
+@-o-keyframes newFadeIn {
+  0% { opacity: 0; filter: brightness(1) blur(20px) }
+  10% { opacity: 1; filter: brightness(2) blur(10px) }
+  100% { opacity: 1; filter: brightness(1) blur(0) }
+}
+
+@-ms-keyframes newFadeIn {
+  0% { opacity: 0; filter: brightness(1) blur(20px) }
+  10% { opacity: 1; filter: brightness(2) blur(10px) }
+  100% { opacity: 1; filter: brightness(1) blur(0) }
+}
+
+/* ------ :: @BLUR|HERO|EFFECT :: ------- */
+
+.blurtape {
+  position: absolute;
+  /* background: rgba(165, 160, 160, 0.5); */
+  width: 100%;
+  height: 700vh;
+  top: 0;
+  backdrop-filter: blur(70px);
+  -webkit-backdrop-filter: blur(70px);
+  z-index: 1;
+  mix-blend-mode: color;
+  overflow: hidden;
+}
+
+.dummy-section {
+  height: 60vh;
+  text-align: center;
+  color: antiquewhite;
+}
+
+.dummy-section h1 {
+  font-size: 80px;
+  margin-top: 30vh;
+  position: relative;
+  z-index: 4;
+  mix-blend-mode: color-burn;
+}
+
+/* ------ :: @VIDEO :: ------- */
+
+.big-container {
+  min-height: 610vh;
+}
+
+video {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
+}
+
+/* ------ :: @TEXTOS :: ------- */
+
+.text-container {
+  margin-top: -50vh;
+}
+
+h2 {
+  opacity: 0;
+  transition: opacity 1.8s;
+}
+
+h2.visible {
+  opacity: 1;
+  position: relative;
+  z-index: 4;
+}
+
+h2 {
+  margin: 33vh 0;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  padding: 0 20%;
+  position: relative;
+}
+
+#vantaBirds {
+  z-index: 4;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 400vh;
+}
+
+#fog {
+  z-index: 4;
+  position: absolute;
+  right: 27%;
+  top: 47%;
+}
+
+@media (max-width: 768px) {
+  .dummy-section h1 {
+    font-size: 50px;
+  }
+
+  .title {
+    font-size: 70px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    top: -10px;
+    left: 0;
+  }
+
+  h2 {
+    font-size: 40px;
+    padding: 0 10%;
+  }
+
+  #fog {
+    display: none;
+  }
+}
